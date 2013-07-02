@@ -1,5 +1,10 @@
 LOCAL_PATH := $(call my-dir)
 
+#include $(CLEAR_VARS) 
+#LOCAL_MODULE    := cocos2dx-talkingdata
+#LOCAL_SRC_FILES := libcocos2dx-talkingdata.a 
+#include $(PREBUILT_STATIC_LIBRARY)
+
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := talkingdata
