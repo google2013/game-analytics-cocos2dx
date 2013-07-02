@@ -43,6 +43,10 @@ extern "C"
 
         do 
         {
+        	if (JAVAVM == NULL) {
+        		LOGE("!!!!!! Not set javavm. Please Call TDGAJniHelper::setJavaVM() in JNI_OnLoad.");
+        		break;
+        	}
             if (JAVAVM->GetEnv((void**)env, JNI_VERSION_1_4) != JNI_OK)
             {
                 LOGD("Failed to get the environment using GetEnv()");
