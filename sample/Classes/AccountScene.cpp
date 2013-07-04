@@ -171,7 +171,7 @@ void AccountLayer::eventMenuCallback(CCObject* pSender) {
     	break;
 
     case UPDATE_TYPE:
-    	if (mTDGAaccount) mTDGAaccount->setAccountType(mTDGAaccount->kAccountTencentWeibo);
+    	if (mTDGAaccount) mTDGAaccount->setAccountType(mTDGAaccount->kAccountType1);
     	break;
 
     default:
