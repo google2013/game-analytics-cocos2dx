@@ -14,16 +14,16 @@ static const char * TDCCAccountTypeString[] = {
 			"QQ_WEIBO",
 			"ND91",
 			"", "", "", "", "",
-			"TYPE11",
-			"TYPE12",
-			"TYPE13",
-			"TYPE14",
-			"TYPE15",
-			"TYPE16",
-			"TYPE17",
-			"TYPE18",
-			"TYPE19",
-			"TYPE20"
+			"TYPE1",
+			"TYPE2",
+			"TYPE3",
+			"TYPE4",
+			"TYPE5",
+			"TYPE6",
+			"TYPE7",
+			"TYPE8",
+			"TYPE9",
+			"TYPE10"
 };
 
 static const char * TDCCGenderString[] = {
@@ -120,6 +120,8 @@ void TDCCAccount::setAge(int age) {
 }
 
 void TDCCAccount::setAccountType(TDCCAccountType accountType) {
+	LOGD("accountType %d", accountType);
+	LOGD("TDCCAccountTypeString[accountType] %s", TDCCAccountTypeString[accountType]);
 	TDGAJniMethodInfo t;
 	TDGAJniMethodInfo type;
 	if (mAccount && TDGAJniHelper::getMethodInfo(t
