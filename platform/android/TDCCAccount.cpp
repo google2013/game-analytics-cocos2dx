@@ -120,8 +120,6 @@ void TDCCAccount::setAge(int age) {
 }
 
 void TDCCAccount::setAccountType(TDCCAccountType accountType) {
-	LOGD("accountType %d", accountType);
-	LOGD("TDCCAccountTypeString[accountType] %s", TDCCAccountTypeString[accountType]);
 	TDGAJniMethodInfo t;
 	TDGAJniMethodInfo type;
 	if (mAccount && TDGAJniHelper::getMethodInfo(t
