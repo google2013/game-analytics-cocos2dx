@@ -2,7 +2,7 @@
 #include "TDGAJniHelper.h"
 #include "TDGALog.h"
 
-#define JAVA_CLASS_NAME "com.tendcloud.tenddata.TDGAItem"
+#define JAVA_CLASS_NAME "com/tendcloud/tenddata/TDGAItem"
 
 void TDCCItem::onPurchase(const char* item, int number, double price) {
 	TDGAJniMethodInfo t;

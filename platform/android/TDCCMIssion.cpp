@@ -2,7 +2,7 @@
 #include "TDGAJniHelper.h"
 #include "TDGALog.h"
 
-#define JAVA_CLASS_NAME "com.tendcloud.tenddata.TDGAMission"
+#define JAVA_CLASS_NAME "com/tendcloud/tenddata/TDGAMission"
 
 void TDCCMission::onBegin(const char* missionId) {
 	TDGAJniMethodInfo t;

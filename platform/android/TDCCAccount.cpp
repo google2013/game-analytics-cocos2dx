@@ -2,9 +2,9 @@
 #include "TDGAJniHelper.h"
 #include "TDGALog.h"
 
-#define JAVA_CLASS_NAME "com.tendcloud.tenddata.TDGAAccount"
-#define JAVA_CLASS_ACCOUNT_TYPE "com.tendcloud.tenddata.TDGAAccount$AccountType"
-#define JAVA_CLASS_GENDER "com.tendcloud.tenddata.TDGAAccount$Gender"
+#define JAVA_CLASS_NAME "com/tendcloud/tenddata/TDGAAccount"
+#define JAVA_CLASS_ACCOUNT_TYPE "com/tendcloud/tenddata/TDGAAccount$AccountType"
+#define JAVA_CLASS_GENDER "com/tendcloud/tenddata/TDGAAccount$Gender"
 
 static const char * TDCCAccountTypeString[] = {
 			"ANONYMOUS",

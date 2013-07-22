@@ -2,7 +2,7 @@
 #include "TDGAJniHelper.h"
 #include "TDGALog.h"
 
-#define JAVA_CLASS_NAME "com.tendcloud.tenddata.TalkingDataGA"
+#define JAVA_CLASS_NAME "com/tendcloud/tenddata/TalkingDataGA"
 
 using namespace std;
 

@@ -2,7 +2,7 @@
 #include "TDGAJniHelper.h"
 #include "TDGALog.h"
 
-#define JAVA_CLASS_NAME "com.tendcloud.tenddata.TDGAVirtualCurrency"
+#define JAVA_CLASS_NAME "com/tendcloud/tenddata/TDGAVirtualCurrency"
 
 void TDCCVirtualCurrency::onChargeRequst(const char* orderId, const char* iapId, double currencyAmount, const char* currencyType, double virtualCurrencyAmount, const char* paymentType) {
 	TDGAJniMethodInfo t;
