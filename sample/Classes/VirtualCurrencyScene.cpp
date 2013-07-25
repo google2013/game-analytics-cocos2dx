@@ -159,8 +159,8 @@ void VirtualCurrencyLayer::keyBackClicked() {
 
 void* VirtualCurrencyLayer::runThread(void* arg) {
 	JNIEnv *env = 0;
-	if (TDGAJniHelper::getJNIEnv(&env)) {
+//	if (TDGAJniHelper::getJNIEnv(&env)) {
 		TDCCVirtualCurrency::onChargeSuccess("o_1");
 		TDGAJniHelper::detachEnv();
-	}
+//	}
 }
