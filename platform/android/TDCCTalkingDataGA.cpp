@@ -2,7 +2,7 @@
 #include "TDGAJniHelper.h"
 #include "TDGALog.h"
 
-#define JAVA_CLASS_NAME "com/tendcloud/tenddata/TalkingDataGA"
+extern jclass gClass_TalkingDtatGA;
 
 using namespace std;
 
@@ -33,15 +33,14 @@ void TDCCTalkingDataGA::onEvent(const char* eventId, EventParamMap* map) {
     }
     TDGAJniMethodInfo t;
     if (TDGAJniHelper::getStaticMethodInfo(t
-    		, JAVA_CLASS_NAME
+    		, gClass_TalkingDtatGA
     		, "onEvent"
     		, "(Ljava/lang/String;Ljava/util/Map;)V")) {
     	jobject jparamMap = createJavaMapObject(t.env, map);
     	jstring jeventId = t.env->NewStringUTF(eventId);
-		t.env->CallStaticVoidMethod(t.classID, t.methodID, jeventId, jparamMap);
+		t.env->CallStaticVoidMethod(gClass_TalkingDtatGA, t.methodID, jeventId, jparamMap);
 		t.env->DeleteLocalRef(jeventId);
 		t.env->DeleteLocalRef(jparamMap);
-		t.env->DeleteLocalRef(t.classID);
 	}
 }
     
@@ -54,12 +53,11 @@ const char* TDCCTalkingDataGA::getDeviceId() {
 
 	TDGAJniMethodInfo t;
 	if (TDGAJniHelper::getStaticMethodInfo(t
-		, JAVA_CLASS_NAME
+		, gClass_TalkingDtatGA
 		, "getDeviceId"
 		, "()Ljava/lang/String;")) {
-		jstring jstr = (jstring)t.env->CallStaticObjectMethod(t.classID, t.methodID);
+		jstring jstr = (jstring)t.env->CallStaticObjectMethod(gClass_TalkingDtatGA, t.methodID);
 		ret = TDGAJniHelper::jstring2string(jstr);
-		t.env->DeleteLocalRef(t.classID);
 	}
 	return ret.c_str();
 }
@@ -67,11 +65,11 @@ const char* TDCCTalkingDataGA::getDeviceId() {
 void TDCCTalkingDataGA::onKill() {
 	TDGAJniMethodInfo t;
 	if (TDGAJniHelper::getStaticMethodInfo(t
-		, JAVA_CLASS_NAME
+		, gClass_TalkingDtatGA
 		, "onKill"
 		, "()V")) {
-		t.env->CallStaticVoidMethod(t.classID, t.methodID);
-		t.env->DeleteLocalRef(t.classID);
+		t.env->CallStaticVoidMethod(gClass_TalkingDtatGA, t.methodID);
 	}
+	TDGAJniHelper::globalDeInit();
 	LOGD("on kill");
 }

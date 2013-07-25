@@ -4,23 +4,22 @@
 #include <jni.h>
 #include <string>
 
-
 typedef struct TDGAJniMethodInfo_ {
     JNIEnv *    env;
-    jclass      classID;
     jmethodID   methodID;
 } TDGAJniMethodInfo;
 
 class TDGAJniHelper {
 public:
 	static bool getJNIEnv(JNIEnv **env);
+	static void detachEnv();
+	static void globalDeInit();
     static JavaVM* getJavaVM();
     static void setJavaVM(JavaVM *javaVM);
     static const char* getExternalAssetPath();
     static void setExternalAssetPath(const char* externalAssetPath);
-    static jclass getClassID(const char *className, JNIEnv *env=0);
-    static bool getStaticMethodInfo(TDGAJniMethodInfo &methodinfo, const char *className, const char *methodName, const char *paramCode);
-    static bool getMethodInfo      (TDGAJniMethodInfo &methodinfo, const char *className, const char *methodName, const char *paramCode);
+    static bool getStaticMethodInfo(TDGAJniMethodInfo &methodinfo, jclass classID, const char *methodName, const char *paramCode);
+    static bool getMethodInfo      (TDGAJniMethodInfo &methodinfo, jclass classID, const char *methodName, const char *paramCode);
     static std::string jstring2string(jstring str);
 
 private:
