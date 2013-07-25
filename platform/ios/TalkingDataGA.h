@@ -69,7 +69,7 @@ typedef enum {
 + (NSString *)getDeviceId;
 
 /**
- *  @method setLogOn 设置记录日志
+ *  @method setLogOn 设置记录日志  如要记录日志，应当最先调用该方法
  */
 + (void)setLogOn;
 
