@@ -60,7 +60,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     // create a scene. it's an autorelease object
     CCScene *pScene = AccountLayer::scene();
-
+    CCLog("applicationDidFinishLaunching DeviceId:%s", TDCCTalkingDataGA::getDeviceId());
     // run
     pDirector->runWithScene(pScene);
     CCLog("exit applicationDidFinishLaunching...");

@@ -22,6 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
 #include "MissionScene.h"
+#include "cocos2d.h"
 #include "AccountScene.h"
 #include "ItemScene.h"
 #include "AppDelegate.h"
