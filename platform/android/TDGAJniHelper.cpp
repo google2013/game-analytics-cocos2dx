@@ -13,28 +13,24 @@ extern "C"
     // java vm helper function
     //////////////////////////////////////////////////////////////////////////
 
-    static bool getEnv(JNIEnv **env)
-    {
+    static bool getEnv(JNIEnv **env) {
 
         bool bRet = false;
-
-        do 
-        {
-        	if (JAVAVM == NULL) {
+        do {
+        	if (JAVAVM) {
+				jint ret = JAVAVM->GetEnv((void**) env, JNI_VERSION_1_4);
+				if (ret != JNI_OK) {
+					jint status = JAVAVM->AttachCurrentThread(env, NULL);
+					if (status < 0) {
+						LOGE("getEnv: failed to attach current thread");
+						env = NULL;
+						break;
+					}
+				}
+			} else {
         		LOGE("!!!!!! Not set javavm. Please Call TDGAJniHelper::setJavaVM() in JNI_OnLoad.");
         		break;
         	}
-            if (JAVAVM->GetEnv((void**)env, JNI_VERSION_1_4) != JNI_OK)
-            {
-                LOGD("Failed to get the environment using GetEnv()");
-                break;
-            }
-
-            if (JAVAVM->AttachCurrentThread(env, 0) < 0)
-            {
-                LOGD("Failed to get the environment using AttachCurrentThread()");
-                break;
-            }
             bRet = true;
         } while (0);        
 
