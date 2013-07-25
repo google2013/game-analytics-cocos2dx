@@ -153,6 +153,12 @@ bool TDGAJniHelper::getJNIEnv(JNIEnv **env) {
 	return getEnv(env);
 }
 
+void TDGAJniHelper::detachEnv() {
+	if (JAVAVM) {
+		JAVAVM->DetachCurrentThread();
+	}
+}
+
 JavaVM* TDGAJniHelper::getJavaVM()
 {
     return m_psJavaVM;

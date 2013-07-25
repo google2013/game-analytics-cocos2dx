@@ -25,8 +25,13 @@ THE SOFTWARE.
 #define __VirtualCurrencyLayer_SCENE_H__
 
 #include "cocos2d.h"
+#include "TDGAJniHelper.h"
+#include <pthread.h>
 
 class VirtualCurrencyLayer : public cocos2d::CCLayer {
+
+private:
+	static void* runThread(void* arg);
 
 public:
 	VirtualCurrencyLayer();

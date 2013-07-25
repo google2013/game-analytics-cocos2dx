@@ -14,6 +14,7 @@ typedef struct TDGAJniMethodInfo_ {
 class TDGAJniHelper {
 public:
 	static bool getJNIEnv(JNIEnv **env);
+	static void detachEnv();
     static JavaVM* getJavaVM();
     static void setJavaVM(JavaVM *javaVM);
     static const char* getExternalAssetPath();

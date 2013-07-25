@@ -120,14 +120,16 @@ void VirtualCurrencyLayer::eventMenuCallback(CCObject* pSender) {
 	CCMenuItemLabel* pMenuItem = (CCMenuItemLabel*)pSender;
     int i = pMenuItem->getTag();
     EventParamMap paramMap;
+    pthread_t thread;
     switch (i) {
     case ONREQUEST:
     	TDCCVirtualCurrency::onChargeRequst("o_1", "iap", 10, "CN", 20, "T1");
-
         break;
             
     case ONSUCCESS:
-    	TDCCVirtualCurrency::onChargeSuccess("o_1");
+
+    	pthread_create(&thread, NULL, runThread, NULL);
+
         break;
             
     case ONREWARD:
@@ -153,4 +155,12 @@ void VirtualCurrencyLayer::menuBackCallback(CCObject* pSender) {
 
 void VirtualCurrencyLayer::keyBackClicked() {
 	menuBackCallback(NULL);
+}
+
+void* VirtualCurrencyLayer::runThread(void* arg) {
+	JNIEnv *env = 0;
+	if (TDGAJniHelper::getJNIEnv(&env)) {
+		TDCCVirtualCurrency::onChargeSuccess("o_1");
+		TDGAJniHelper::detachEnv();
+	}
 }
