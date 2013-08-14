@@ -14,7 +14,7 @@ private:
 	TDCCVirtualCurrency() {}
 
 public:
-	static void onChargeRequst(const char* orderId, const char* iapId, double currencyAmount, const char* currencyType, double virtualCurrencyAmount, const char* paymentType);
+	static void onChargeRequest(const char* orderId, const char* iapId, double currencyAmount, const char* currencyType, double virtualCurrencyAmount, const char* paymentType);
 
 	static void onChargeSuccess(const char* orderId);
     

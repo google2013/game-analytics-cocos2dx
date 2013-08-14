@@ -4,7 +4,7 @@
 
 extern jclass gClass_Virtual;
 
-void TDCCVirtualCurrency::onChargeRequst(const char* orderId, const char* iapId, double currencyAmount, const char* currencyType, double virtualCurrencyAmount, const char* paymentType) {
+void TDCCVirtualCurrency::onChargeRequest(const char* orderId, const char* iapId, double currencyAmount, const char* currencyType, double virtualCurrencyAmount, const char* paymentType) {
 	TDGAJniMethodInfo t;
 	if (TDGAJniHelper::getStaticMethodInfo(t
 		, gClass_Virtual
