@@ -25,7 +25,9 @@ THE SOFTWARE.
 #define __VirtualCurrencyLayer_SCENE_H__
 
 #include "cocos2d.h"
+#ifdef ANDROID
 #include "TDGAJniHelper.h"
+#endif
 #include <pthread.h>
 
 class VirtualCurrencyLayer : public cocos2d::CCLayer {
