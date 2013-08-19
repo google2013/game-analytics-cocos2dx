@@ -39,7 +39,7 @@ void TDCCTalkingDataGA::onEvent(const char* eventId, EventParamMap* map) {
         [TalkingDataGA onEvent:pId eventData:dict];
     }
 }
-    
+
 void TDCCTalkingDataGA::setLatitude(double latitude ,double longitude) {
     [TalkingDataGA setLatitude:latitude longitude:longitude];
 }
@@ -51,6 +51,10 @@ const char* TDCCTalkingDataGA::getDeviceId() {
 
 void TDCCTalkingDataGA::onKill() {
     // for android. ios donothing.
+}
+
+void TDCCTalkingDataGA::setVerboseLogEnabled() {
+    [TalkingDataGA setVerboseLogEnabled];
 }
     
 

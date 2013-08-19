@@ -73,3 +73,13 @@ void TDCCTalkingDataGA::onKill() {
 	TDGAJniHelper::globalDeInit();
 	LOGD("on kill");
 }
+
+void TDCCTalkingDataGA::setVerboseLogEnabled() {
+	TDGAJniMethodInfo t;
+	if (TDGAJniHelper::getStaticMethodInfo(t
+		, gClass_TalkingDtatGA
+		, "setVerboseLogEnabled"
+		, "()V")) {
+		t.env->CallStaticVoidMethod(gClass_TalkingDtatGA, t.methodID);
+	}
+}

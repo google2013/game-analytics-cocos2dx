@@ -31,6 +31,8 @@ public:
     
     static void onKill();
 
+    static void setVerboseLogEnabled();
+
 };
 
 #endif

@@ -69,9 +69,9 @@ typedef enum {
 + (NSString *)getDeviceId;
 
 /**
- *  @method setLogOn 设置记录日志  如要记录日志，应当最先调用该方法
+ *  @method setVerboseLogEnabled 设置记录日志  如要记录日志，应当最先调用该方法
  */
-+ (void)setLogOn;
++ (void)setVerboseLogEnabled;
 
 /**
  *  @method setSdkType 设置SDK类型  区分开发框架使用，开发者请勿调用

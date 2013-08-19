@@ -6,6 +6,7 @@
 #include <android/log.h>
 
 #include "AccountScene.h"
+#include "TDCCTalkingDataGA.h"
 
 using namespace cocos2d;
 

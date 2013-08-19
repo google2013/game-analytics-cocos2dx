@@ -139,6 +139,7 @@ void VirtualCurrencyLayer::eventMenuCallback(CCObject* pSender) {
     case ONEVENT:
     	paramMap.insert(EventParamPair("type", "popular"));
 		paramMap.insert(EventParamPair("artist", "JJLin"));
+        paramMap["aa"] = "bb";
 		TDCCTalkingDataGA::onEvent("music", &paramMap);
 
     	break;
