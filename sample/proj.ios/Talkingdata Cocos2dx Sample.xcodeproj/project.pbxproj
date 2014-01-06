@@ -39,6 +39,7 @@
 		25DC1F161740EF830075DF12 /* f2.png in Resources */ = {isa = PBXBuildFile; fileRef = 25DC1F121740EF830075DF12 /* f2.png */; };
 		25DC1F621742185E0075DF12 /* MissionScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25DC1F5D1742185E0075DF12 /* MissionScene.cpp */; };
 		25DC1F631742185E0075DF12 /* VirtualCurrencyScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25DC1F5F1742185E0075DF12 /* VirtualCurrencyScene.cpp */; };
+		ADC1FA79187A6158001EADAA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC1FA78187A6158001EADAA /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		25DC1F5E1742185E0075DF12 /* MissionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissionScene.h; sourceTree = "<group>"; };
 		25DC1F5F1742185E0075DF12 /* VirtualCurrencyScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VirtualCurrencyScene.cpp; sourceTree = "<group>"; };
 		25DC1F601742185E0075DF12 /* VirtualCurrencyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualCurrencyScene.h; sourceTree = "<group>"; };
+		ADC1FA78187A6158001EADAA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADC1FA79187A6158001EADAA /* Security.framework in Frameworks */,
 				25413AD817439E84001A4694 /* AdSupport.framework in Frameworks */,
 				25413AD617439C6A001A4694 /* libcocos2dx-talkingdata.a in Frameworks */,
 				25413A6B17438C90001A4694 /* libcocos2dx.a in Frameworks */,
@@ -198,6 +201,7 @@
 		259FA2C4173BADDC0024100D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ADC1FA78187A6158001EADAA /* Security.framework */,
 				25413AD717439E84001A4694 /* AdSupport.framework */,
 				25591D2F173CEC3100F5AA87 /* CoreTelephony.framework */,
 				25591CE4173CD89700F5AA87 /* OpenGLES.framework */,
@@ -459,6 +463,7 @@
 					USE_FILE32API,
 					CC_TARGET_OS_IPHONE,
 					"COCOS2D_DEBUG=1",
+					TARGET_OS_IPHONE,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Talkingdata Cocos2dx Sample-Info.plist";
 				ONLY_ACTIVE_ARCH = NO;
@@ -480,6 +485,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					USE_FILE32API,
 					CC_TARGET_OS_IPHONE,
+					TARGET_OS_IPHONE,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Talkingdata Cocos2dx Sample-Info.plist";
 				LLVM_LTO = NO;
