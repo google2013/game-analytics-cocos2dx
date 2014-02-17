@@ -13,7 +13,7 @@
 typedef enum {
     kAccountAnonymous = 0,      // 匿名帐户
     kAccountRegistered = 1,     // 显性注册帐户
-    kAccountSianWeibo = 2,      // 新浪微博
+    kAccountSinaWeibo = 2,      // 新浪微博
     kAccountQQ = 3,             // QQ帐户
     kAccountTencentWeibo = 4,   // 腾讯微博
     kAccountND91 = 5,           // 91帐户
@@ -69,9 +69,9 @@ typedef enum {
 + (NSString *)getDeviceId;
 
 /**
- *  @method setVerboseLogEnabled 设置记录日志  如要记录日志，应当最先调用该方法
+ *  @method setVerboseLogDisabled 设置不显示日志  如发布时不需显示日志，应当最先调用该方法
  */
-+ (void)setVerboseLogEnabled;
++ (void)setVerboseLogDisabled;
 
 /**
  *  @method setSdkType 设置SDK类型  区分开发框架使用，开发者请勿调用

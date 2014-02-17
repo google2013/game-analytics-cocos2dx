@@ -3,7 +3,7 @@
 //  cocod2dx-talkingdata
 //
 //  Created by Wei Mike on 13-5-8.
-//  Copyright (c) 2013年 Talkingdata. All rights reserved.
+//  Copyright (c) 2013��� Talkingdata. All rights reserved.
 //
 
 #ifndef cocod2dx_talkingdata_CCTalkingDataGA_h
@@ -30,6 +30,8 @@ public:
     static const char* getDeviceId();
     
     static void onKill();
+
+    static void setVerboseLogDisabled();
 
     static void setVerboseLogEnabled();
 

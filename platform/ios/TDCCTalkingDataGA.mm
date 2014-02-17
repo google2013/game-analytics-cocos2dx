@@ -15,6 +15,7 @@ void TDCCTalkingDataGA::onStart(const char* appId, const char* channelId) {
     }
     NSString* nsAppId = (appId) ? [NSString stringWithUTF8String : appId] : nil;
     NSString* nsChannel = (channelId) ? [NSString stringWithUTF8String : channelId] : nil;
+    [TalkingDataGA setSdkType:1];
     [TalkingDataGA onStart:nsAppId withChannelId:nsChannel];
 }
     
@@ -53,8 +54,10 @@ void TDCCTalkingDataGA::onKill() {
     // for android. ios donothing.
 }
 
-void TDCCTalkingDataGA::setVerboseLogEnabled() {
-    [TalkingDataGA setVerboseLogEnabled];
+void TDCCTalkingDataGA::setVerboseLogDisabled() {
+    [TalkingDataGA setVerboseLogDisabled];
+}
+void TDCCTalkingDataGA::setVerboseLogEnabled(){
 }
     
 

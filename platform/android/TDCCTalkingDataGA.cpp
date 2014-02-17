@@ -73,6 +73,9 @@ void TDCCTalkingDataGA::onKill() {
 	TDGAJniHelper::globalDeInit();
 	LOGD("on kill");
 }
+void TDCCTalkingDataGA::setVerboseLogDisabled(){
+
+}
 
 void TDCCTalkingDataGA::setVerboseLogEnabled() {
 	TDGAJniMethodInfo t;
