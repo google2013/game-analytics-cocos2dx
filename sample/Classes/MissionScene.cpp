@@ -137,7 +137,7 @@ void MissionLayer::eventMenuCallback(CCObject* pSender) {
     
     switch (i) {
     case ONBEGIN:
-    	TDCCMission::onCompleted(missionid);
+    	TDCCMission::onBegin(missionid);
 
         break;
             
