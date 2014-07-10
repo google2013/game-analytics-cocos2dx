@@ -12,11 +12,7 @@ public class TalkingDataCocos2dx extends Cocos2dxActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TalkingDataGA.sPlatformType = TalkingDataGA.PLATFORM_TYPE_COCOS2DX;
-        
         com.igexin.sdk.PushManager.getInstance().initialize(this);
-        // 代码初始化, 也可以在AndroidManifest.xml中声明.
-//         TalkingDataGA.init(this, "2E9D3A639C5BA2677DD652E02FEBC489", "cocos");
     }
 
     @Override

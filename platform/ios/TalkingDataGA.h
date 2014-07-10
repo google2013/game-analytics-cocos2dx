@@ -69,6 +69,19 @@ typedef enum {
 + (NSString *)getDeviceId;
 
 /**
+ *  @method setDeviceToken 设置DeviceToken
+ *  @param  deviceToken    从Apple获取的DeviceToken
+ */
++ (void)setDeviceToken:(NSData *)deviceToken;
+
+/**
+ *  @method handleTDGAPushMessage 处理来自TalkingData的Push消息
+ *  @param  message               收到的消息
+ *  @return YES 来自TalkingData的消息，SDK已处理    NO 其他来源消息，开发者需自行处理
+ */
++ (BOOL)handleTDGAPushMessage:(NSDictionary *)message;
+
+/**
  *  @method setVerboseLogDisabled 设置不显示日志  如发布时不需显示日志，应当最先调用该方法
  */
 + (void)setVerboseLogDisabled;

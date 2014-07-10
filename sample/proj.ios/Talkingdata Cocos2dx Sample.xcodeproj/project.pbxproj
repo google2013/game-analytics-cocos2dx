@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25413A6B17438C90001A4694 /* libcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 259FA301173BAEE70024100D /* libcocos2dx.a */; };
 		25413A7617439006001A4694 /* ItemScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25DC1F5B1742185E0075DF12 /* ItemScene.cpp */; };
 		25413AD617439C6A001A4694 /* libcocos2dx-talkingdata.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25413AD517439C62001A4694 /* libcocos2dx-talkingdata.a */; };
 		25413AD817439E84001A4694 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25413AD717439E84001A4694 /* AdSupport.framework */; };
@@ -39,17 +38,11 @@
 		25DC1F161740EF830075DF12 /* f2.png in Resources */ = {isa = PBXBuildFile; fileRef = 25DC1F121740EF830075DF12 /* f2.png */; };
 		25DC1F621742185E0075DF12 /* MissionScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25DC1F5D1742185E0075DF12 /* MissionScene.cpp */; };
 		25DC1F631742185E0075DF12 /* VirtualCurrencyScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25DC1F5F1742185E0075DF12 /* VirtualCurrencyScene.cpp */; };
+		AD7F67AE196E33B700E7FB56 /* libcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7F67AD196E323600E7FB56 /* libcocos2dx.a */; };
 		ADC1FA79187A6158001EADAA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC1FA78187A6158001EADAA /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		25413AAD174394DF001A4694 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 259FA2F9173BAEE60024100D /* cocos2dx.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 1551A33E158F2AB200E66CFE;
-			remoteInfo = cocos2dx;
-		};
 		25413AD417439C62001A4694 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 259FA2F0173BAED90024100D /* cocos2dx-talkingdata.xcodeproj */;
@@ -57,9 +50,9 @@
 			remoteGlobalIDString = 25EA06C41739F1DC005EF56D;
 			remoteInfo = "cocos2dx-talkingdata";
 		};
-		259FA300173BAEE70024100D /* PBXContainerItemProxy */ = {
+		AD7F67AC196E323600E7FB56 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 259FA2F9173BAEE60024100D /* cocos2dx.xcodeproj */;
+			containerPortal = AD7F67A8196E323500E7FB56 /* cocos2dx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1551A33F158F2AB200E66CFE;
 			remoteInfo = cocos2dx;
@@ -89,7 +82,6 @@
 		259FA2EC173BAEC10024100D /* AccountScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AccountScene.cpp; sourceTree = "<group>"; };
 		259FA2ED173BAEC10024100D /* AccountScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountScene.h; sourceTree = "<group>"; };
 		259FA2F0173BAED90024100D /* cocos2dx-talkingdata.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "cocos2dx-talkingdata.xcodeproj"; path = "../../proj.ios/cocos2dx-talkingdata.xcodeproj"; sourceTree = "<group>"; };
-		259FA2F9173BAEE60024100D /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = "../../../cocos2d-x/cocos2dx/proj.ios/cocos2dx.xcodeproj"; sourceTree = "<group>"; };
 		259FA31F173BB3520024100D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		259FA321173BB36E0024100D /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		259FA323173BB3850024100D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -109,6 +101,8 @@
 		25DC1F5E1742185E0075DF12 /* MissionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissionScene.h; sourceTree = "<group>"; };
 		25DC1F5F1742185E0075DF12 /* VirtualCurrencyScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VirtualCurrencyScene.cpp; sourceTree = "<group>"; };
 		25DC1F601742185E0075DF12 /* VirtualCurrencyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualCurrencyScene.h; sourceTree = "<group>"; };
+		AD7F67A8196E323500E7FB56 /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = "../../../cocos2d-x-2.2.2/cocos2dx/proj.ios/cocos2dx.xcodeproj"; sourceTree = "<group>"; };
+		AD7F67AF196E34B000E7FB56 /* TalkingDataGA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TalkingDataGA.h; path = ../../../platform/ios/TalkingDataGA.h; sourceTree = "<group>"; };
 		ADC1FA78187A6158001EADAA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -117,10 +111,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD7F67AE196E33B700E7FB56 /* libcocos2dx.a in Frameworks */,
 				ADC1FA79187A6158001EADAA /* Security.framework in Frameworks */,
 				25413AD817439E84001A4694 /* AdSupport.framework in Frameworks */,
 				25413AD617439C6A001A4694 /* libcocos2dx-talkingdata.a in Frameworks */,
-				25413A6B17438C90001A4694 /* libcocos2dx.a in Frameworks */,
 				25591D30173CEC3100F5AA87 /* CoreTelephony.framework in Frameworks */,
 				25591CE5173CD89700F5AA87 /* OpenGLES.framework in Frameworks */,
 				259FA324173BB3850024100D /* libz.dylib in Frameworks */,
@@ -146,6 +140,7 @@
 		25591CFB173CD9A500F5AA87 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				AD7F67AF196E34B000E7FB56 /* TalkingDataGA.h */,
 				25591CFC173CD9A500F5AA87 /* AppController.h */,
 				25591CFD173CD9A500F5AA87 /* AppController.mm */,
 				25591CFE173CD9A500F5AA87 /* main.m */,
@@ -178,7 +173,7 @@
 		259FA2B6173BADDC0024100D = {
 			isa = PBXGroup;
 			children = (
-				259FA2F9173BAEE60024100D /* cocos2dx.xcodeproj */,
+				AD7F67A8196E323500E7FB56 /* cocos2dx.xcodeproj */,
 				259FA2F0173BAED90024100D /* cocos2dx-talkingdata.xcodeproj */,
 				259FA2E9173BAEC10024100D /* Classes */,
 				259FA2E7173BAE480024100D /* Talkingdata Cocos2dx Sample-Info.plist */,
@@ -233,10 +228,10 @@
 			path = ../Classes;
 			sourceTree = "<group>";
 		};
-		259FA2FA173BAEE60024100D /* Products */ = {
+		AD7F67A9196E323500E7FB56 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				259FA301173BAEE70024100D /* libcocos2dx.a */,
+				AD7F67AD196E323600E7FB56 /* libcocos2dx.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,7 +250,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				25413AAE174394DF001A4694 /* PBXTargetDependency */,
 			);
 			name = "Talkingdata Cocos2dx Sample";
 			productName = "Talkingdata Cocos2dx Sample";
@@ -287,8 +281,8 @@
 					ProjectRef = 259FA2F0173BAED90024100D /* cocos2dx-talkingdata.xcodeproj */;
 				},
 				{
-					ProductGroup = 259FA2FA173BAEE60024100D /* Products */;
-					ProjectRef = 259FA2F9173BAEE60024100D /* cocos2dx.xcodeproj */;
+					ProductGroup = AD7F67A9196E323500E7FB56 /* Products */;
+					ProjectRef = AD7F67A8196E323500E7FB56 /* cocos2dx.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -306,11 +300,11 @@
 			remoteRef = 25413AD417439C62001A4694 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		259FA301173BAEE70024100D /* libcocos2dx.a */ = {
+		AD7F67AD196E323600E7FB56 /* libcocos2dx.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libcocos2dx.a;
-			remoteRef = 259FA300173BAEE70024100D /* PBXContainerItemProxy */;
+			remoteRef = AD7F67AC196E323600E7FB56 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -355,14 +349,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		25413AAE174394DF001A4694 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = cocos2dx;
-			targetProxy = 25413AAD174394DF001A4694 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		259FA2DD173BADDD0024100D /* Debug */ = {
@@ -465,6 +451,14 @@
 					"COCOS2D_DEBUG=1",
 					TARGET_OS_IPHONE,
 				);
+				HEADER_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/include/libxml2/\"",
+					"\"$(SRCROOT)/../../../cocos2d-x-2.2.2/cocos2dx/include\"",
+					"\"$(SRCROOT)/../../../cocos2d-x-2.2.2/cocos2dx\"",
+					"\"$(SRCROOT)/../../../cocos2d-x-2.2.2/cocos2dx/platform/ios\"",
+					"\"$(SRCROOT)/../../../cocos2d-x-2.2.2/cocos2dx/kazmath/include\"",
+					"\"$(SRCROOT)/../../include\"",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Talkingdata Cocos2dx Sample-Info.plist";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -486,6 +480,14 @@
 					USE_FILE32API,
 					CC_TARGET_OS_IPHONE,
 					TARGET_OS_IPHONE,
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/include/libxml2/\"",
+					"\"$(SRCROOT)/../../../cocos2d-x-2.2.2/cocos2dx/include\"",
+					"\"$(SRCROOT)/../../../cocos2d-x-2.2.2/cocos2dx\"",
+					"\"$(SRCROOT)/../../../cocos2d-x-2.2.2/cocos2dx/platform/ios\"",
+					"\"$(SRCROOT)/../../../cocos2d-x-2.2.2/cocos2dx/kazmath/include\"",
+					"\"$(SRCROOT)/../../include\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Talkingdata Cocos2dx Sample-Info.plist";
 				LLVM_LTO = NO;
