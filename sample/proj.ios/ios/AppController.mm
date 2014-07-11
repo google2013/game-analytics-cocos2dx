@@ -26,7 +26,7 @@
 #import "cocos2d.h"
 #import "EAGLView.h"
 #import "AppDelegate.h"
-
+#import "TalkingDataGA.h"
 #import "RootViewController.h"
 
 @implementation AppController
@@ -71,6 +71,12 @@ static AppDelegate s_sharedApplication;
     [window makeKeyAndVisible];
 
     [[UIApplication sharedApplication] setStatusBarHidden: YES];
+    [[UIApplication sharedApplication]registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
+    
+    [TalkingDataGA onStart:@"2B002F9CD724EB09730AF32CB4D909C3" withChannelId:@"Appstore"];
+    if (![TalkingDataGA handleTDGAPushMessage:launchOptions]) {
+        // other code
+    }
     
     cocos2d::CCApplication::sharedApplication()->run();
     return YES;
@@ -113,6 +119,16 @@ static AppDelegate s_sharedApplication;
      See also applicationDidEnterBackground:.
      */
 }
+
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+   
+    [TalkingDataGA setDeviceToken:deviceToken];
+}
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+    [TalkingDataGA handleTDGAPushMessage:userInfo];
+}
+
 
 
 #pragma mark -
