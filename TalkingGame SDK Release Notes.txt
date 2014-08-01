@@ -1,6 +1,20 @@
 TalkingData Game Analytics SDK 版本发布说明
-最后更新：2014–2-13
-注意：根据游戏的开放框架不同，请下载对应的SDK包，Game Analytics提供对通用开发（iOS、android、WP）、Unity 3D、Cocos2d-x、Flash AIR、PhoneGap的支持。
+最后更新：2014–7-10
+注意：根据游戏的开发框架不同，请下载对应的SDK包，Game Analytics提供对通用开发（iOS、android、WP）、Unity 3D、Cocos2d-x、Flash AIR、PhoneGap的支持。
+
+Version 3.0.0
+————————————————————————————————————————————————————————————————————---------
+发布日期：2014–7-10
+更新内容：
+*本期更新支持营销组件功能，当前只发布了针对iOS、android原生开发版本，各类游戏框架独立版本暂未提供。
+
+iOS
+ 1. 增加了对苹果APNS的支持，可以直接在数据平台编辑推送来进行下发；
+ 2. 去掉了对jsonkit第三方库的使用，改为使用NSJSONSerialization；
+ 3. 增加了对arm64的支持，现在您可以更方便的进行arm64的编译了。
+Android
+ 1. 增加了SDK对第三方推送的支持，可以直接利用第三方推送SDK来进行消息推送；
+ 2. 优化了对活跃用户的定义策略，现在单纯在后台有Service而没有开启游戏情况下不会计算活跃。
 
 
 Version 2.1.0 重要更新
@@ -8,7 +22,7 @@ Version 2.1.0 重要更新
 发布日期：2014-2-13
 更新内容：
 *增加了对使用PhoneGap平台所开发游戏的支持；
-*增加了对WP平台游戏的支持，WP平台SDK为1.0.0beta版；
+*增加了对WP平台游戏的支持，WP平台SDK为1.0.0 beta版；
 
 iOS
  1.进一步优化了iOS7的设备ID策略，不强制恢复出厂设置前提下保持稳定；
@@ -30,7 +44,7 @@ ANE
 PhoneGap 新发布
  1.对PhoneGap平台开发的跨平台游戏进行了支持，可以支持游戏版全部数据。
 
-WP 新发布（Beta 1.1.0版）
+WP 新发布（1.0.0 Beta版）
  1.增加了对WP平台的支持，可以支持游戏版中全部数据。
 
 
