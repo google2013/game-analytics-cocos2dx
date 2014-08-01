@@ -9,7 +9,7 @@ $(addprefix ../../platform/android/, \
     TDCCTalkingDataGA.cpp \
     TDGAJniHelper.cpp \
     TDCCItem.cpp \
-    TDCCMission.cpp \
+    TDCCMIssion.cpp \
     TDCCVirtualCurrency.cpp \
     TDCCAccount.cpp \
 ) \

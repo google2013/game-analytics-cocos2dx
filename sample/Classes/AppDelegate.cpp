@@ -46,6 +46,7 @@ void AppDelegate::loadAnalyticsPlugin()
 bool AppDelegate::applicationDidFinishLaunching()
 {
 	CCLog("enter applicationDidFinishLaunching...");
+    TDCCTalkingDataGA::onStart("2B002F9CD724EB09730AF32CB4D909C3", "");
     // initialize director
     CCDirector *pDirector = CCDirector::sharedDirector();
     pDirector->setOpenGLView(CCEGLView::sharedOpenGLView());
