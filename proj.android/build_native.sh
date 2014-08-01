@@ -1,5 +1,5 @@
 # build
-/Users/weimike/Documents/android/android-ndk-r8d/ndk-build -j 2
+/android/android-ndk-r8e/ndk-build -j 2
 
 echo
 if [ "0" != "$?" ]; then
