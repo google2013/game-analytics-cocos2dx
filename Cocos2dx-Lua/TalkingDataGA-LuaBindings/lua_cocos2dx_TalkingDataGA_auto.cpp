@@ -233,7 +233,7 @@ int lua_cocos2dx_TalkingDataGA_setVerboseLogDisabled(lua_State* tolua_S)
 #endif
     return 0;
 }
-int lua_cocos2dx_TalkingDataGA_setLatitude(lua_State* tolua_S)
+int lua_cocos2dx_TalkingDataGA_setLocation(lua_State* tolua_S)
 {
     int argc = 0;
     bool ok  = true;
@@ -259,11 +259,11 @@ int lua_cocos2dx_TalkingDataGA_setLatitude(lua_State* tolua_S)
         TDCCTalkingDataGA::setLatitude(arg0, arg1);
         return 0;
     }
-    CCLOG("%s has wrong number of arguments: %d, was expecting %d\n ", "setLatitude",argc, 2);
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d\n ", "setLocation",argc, 2);
     return 0;
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_TalkingDataGA_setLatitude'.",&tolua_err);
+    tolua_error(tolua_S,"#ferror in function 'lua_cocos2dx_TalkingDataGA_setLocation'.",&tolua_err);
 #endif
     return 0;
 }
@@ -285,7 +285,7 @@ int lua_register_cocos2dx_TalkingDataGA(lua_State* tolua_S)
         tolua_function(tolua_S,"getDeviceId", lua_cocos2dx_TalkingDataGA_getDeviceId);
         tolua_function(tolua_S,"onEvent", lua_cocos2dx_TalkingDataGA_onEvent);
         tolua_function(tolua_S,"setVerboseLogDisabled", lua_cocos2dx_TalkingDataGA_setVerboseLogDisabled);
-        tolua_function(tolua_S,"setLatitude", lua_cocos2dx_TalkingDataGA_setLatitude);
+        tolua_function(tolua_S,"setLocation", lua_cocos2dx_TalkingDataGA_setLocation);
     tolua_endmodule(tolua_S);
     std::string typeName = typeid(TDCCTalkingDataGA).name();
     g_luaType[typeName] = "TalkingDataGA";
