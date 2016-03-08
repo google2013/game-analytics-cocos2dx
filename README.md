@@ -9,8 +9,11 @@
 	*   [初始化SDK](#initSDK)
 	*   [SDK API](#SDKAPI)
 
-
-*   Lua
+*  Lua
+	*  	[导入 SDK􏰋􏰜􏰚](#SDKImport)
+	*  	[Cocos2d-x 3.x的接入方法](#Cocos2d-x3.x)
+	*   [iOS路径配置](#iOSpathconfig)
+	*   [SDK Lua的调用](#SDKuse)
 
 
 #### <a name="Common"></a> 为游戏申请APP ID：
@@ -179,3 +182,37 @@ static void onFailed(const char* missionId, const char* failedCause);
 static void onEvent(const char* eventId, EventParamMap* map = NULL);
 ```
 ##### 注:具体SDK API 的使用请看Demo.
+
+
+### lua
+#### <a name="SDKImport"></a> 导入 SDK􏰋􏰜􏰚：        
+* 􏰱􏰲 􏰱􏰲 按照 `Cocos2d` 的接入指南(C++导入部分)将 `Cocos2d` 的 `SDK` 导入您的工程，并安装接入指南进行配置。   
+
+#### <a name="Cocos2d-x3.x"></a> Cocos2d-x 3.x的接入方法
+* 将 `Cocos2dx-Lua/Cocos2dx-3.x` 文件夹中的10个文件添加到您的工程中，如  `/frameworks/cocos2d-x/cocos/scripting/lua-bindings/auto` 目录下。   
+* 在您工程 `/frameworks/cocos2d-x/cocos/scripting/lua-bindings/manual/`  `CCLuaStack.cpp` 文件中，添加上面的 5 个.hpp头文件。
+
+``` bash  
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID) #include "lua_cocos2dx_TalkingDataGA_auto.hpp"#include "lua_cocos2dx_TDGAAccount_auto.hpp"#include "lua_cocos2dx_TDGAMission_auto.hpp"#include "lua_cocos2dx_TDGAVirtualCurrency_auto.hpp"#include "lua_cocos2dx_TDGAItem_auto.hpp"#endif
+
+```
+* 在 `CCLuaStack.cpp` 文件的init方法中调用lua注册方法。
+
+``` bash 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)register_all_cocos2dx_TalkingDataGA(_state);register_all_cocos2dx_TDGAAccount(_state);register_all_cocos2dx_TDGAMission(_state);register_all_cocos2dx_TDGAVirtualCurrency(_state);register_all_cocos2dx_TDGAItem(_state);#endif
+
+```
+#### <a name="iOSpathconfig"></a> iOS路径配置
+* 选中 `cocos2d_lua_bindings.xcodeproj` 文件，`TARGETS` 为 `libluacocos2d iOS` , 点击 `Build Settings` , 找到 `Search Paths` 下的 `Header Search Patchs` , 添加路径：`$(SRCROOT)/../../../../plugin/plugins/TalkingDataGameAnalytics/include`  
+
+
+
+lua环境配置参考下图：
+
+<img src="images/gameCocos10.png" width="800px"/>  
+
+
+#### <a name="SDKuse"></a> SDK Lua的调用
+以下在您的.lua 文件里调用
+
+##### 1.	TalkingDataGA  * TalkingDataGA:setVerboseLogDisabled()   * TalkingDataGA:onStart(“user_app_key”, “channel_Id”)   * local eventData = {key1="value1", key2="value2", key3="value3"}  * TalkingDataGA:onEvent(“event1”, eventData)   * TalkingDataGA:setLocation(39.9497, 116.4137)   * local deviceId = TalkingDataGA:getDeviceId()   * TalkingDataGA:onKill()   ##### 2.	TDGAAccount``` bash    账号类型    kAccountAnonymous       --匿名帐户    kAccountRegistered      --显性注册帐户    kAccountSinaWeibo       --新浪微博    kAccountQQ              --QQ帐户    kAccountTencentWeibo    --腾讯微博    kAccountND91            --91帐户    kAccountType1           --预留1    kAccountType2           --预留2    kAccountType3           --预留3    kAccountType4           --预留4    kAccountType5           --预留5    kAccountType6           --预留6    kAccountType7           --预留7    kAccountType8           --预留8    kAccountType9           --预留9    kAccountType10          --预留10    性别    kGenderUnknown = 0,      --未知    kGenderMale = 1,          --男    kGenderFemale = 2        --女```* TDGAAccount:setAccount("user001")   * TDGAAccount:setAccountName("张三")     * TDGAAccount:setAccountType(TDGAAccount.kAccountRegistered)* TDGAAccount:setLevel(2)* TDGAAccount:setGender(TDGAAccount.kGenderFemale)* TDGAAccount:setAge(29)* TDGAAccount:setGameServer("国服2")##### 3TDGAMission* TDGAMission:onBegin("新手引导")* TDGAMission:onCompleted("新手引导")* TDGAMission:onFailed("新手引导", "角色死亡")##### 4.	TDGAVirtualCurrency* TDGAVirtualCurrency:onChargeRequest("order001", "大号宝箱", 100, "CNY", 1000, "AliPay")* TDGAVirtualCurrency:onChargeSuccess("order001")* TDGAVirtualCurrency:onReward(5, "新手奖励")##### 5.	TDGAItem* TDGAItem:onPurchase("helmet1", 2, 25)* TDGAItem:onUse("helmet1", 1)
