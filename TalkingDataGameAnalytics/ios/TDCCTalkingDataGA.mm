@@ -15,7 +15,7 @@ void TDCCTalkingDataGA::onStart(const char* appId, const char* channelId) {
     }
     NSString* nsAppId = (appId) ? [NSString stringWithUTF8String : appId] : nil;
     NSString* nsChannel = (channelId) ? [NSString stringWithUTF8String : channelId] : nil;
-    [TalkingDataGA setSdkType:1];
+    [TalkingDataGA setSDKFramework:1];
     [TalkingDataGA onStart:nsAppId withChannelId:nsChannel];
 }
     
